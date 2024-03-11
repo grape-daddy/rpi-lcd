@@ -17,7 +17,7 @@ from time import sleep
 display = drivers.Lcd()
 load_dotenv()
 
-ipv4 = check_output(["hostname", "-I"], encording="utf-8").split()[0]
+ipv4 = check_output(["hostname", "-I"], encoding="utf-8").split()[0]
 mqtt_broker = os.getenv('MQTT_BROKER')
 	
 def mqtt_broker_string(display, text='', num_line=1, num_cols=16):
